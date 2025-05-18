@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Список пассажиров</title>
+</head>
+<body>
+  <h2>Список пассажиров</h2>
+  <table border="1">
+    <tr>
+      <th>ID</th>
+      <th>Имя</th>
+      <th>ID рейса</th>
+    </tr>
+    {% for p in passengers %}
+    <tr>
+      <td>{{ p.id }}</td>
+      <td>{{ p.name }}</td>
+      <td>{{ p.flight_id }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+  <a href="/">На главную</a>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Авиакомпания</title>
+</head>
+<body>
+  <h1>Авиакомпания</h1>
+  <ul>
+    <li><a href="/aircraft/create">Добавить самолёт</a></li>
+    <li><a href="/flights/create">Добавить рейс</a></li>
+    <li><a href="/passengers/create">Добавить пассажира</a></li>
+    <li><a href="/aircraft">Список самолётов</a></li>
+    <li><a href="/flights">Список рейсов</a></li>
+    <li><a href="/passengers">Список пассажиров</a></li>
+    <li><a href="/passengers/export">Экспорт пассажиров в XML</a></li>
+
+    <form action="/passengers/import" method="post" enctype="multipart/form-data">
+      <label for="xml_file">Импорт пассажиров</label>
+      <input type="file" id="xml_file" name="file" accept=".xml">
+      <button type="submit">Импортировать</button>
+    </form>
+  </ul>
+</body>
+</html>
+

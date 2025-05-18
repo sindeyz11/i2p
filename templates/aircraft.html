@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Список самолётов</title>
+</head>
+<body>
+  <h2>Список самолётов</h2>
+  <table border="1">
+    <tr>
+      <th>ID</th>
+      <th>Модель</th>
+      <th>Вместимость</th>
+    </tr>
+    {% for a in aircraft %}
+    <tr>
+      <td>{{ a.id }}</td>
+      <td>{{ a.model }}</td>
+      <td>{{ a.capacity }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+  <a href="/">На главную</a>
+</body>
+</html>

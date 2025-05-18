@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Список рейсов</title>
+</head>
+<body>
+  <h2>Список рейсов</h2>
+  <table border="1">
+    <tr>
+      <th>ID</th>
+      <th>Номер рейса</th>
+      <th>Откуда</th>
+      <th>Куда</th>
+      <th>Дата и время</th>
+      <th>ID самолёта</th>
+    </tr>
+    {% for flight in flights %}
+    <tr>
+      <td>{{ flight.id }}</td>
+      <td>{{ flight.flight_number }}</td>
+      <td>{{ flight.departure }}</td>
+      <td>{{ flight.arrival }}</td>
+      <td>{{ flight.datetime }}</td>
+      <td>{{ flight.aircraft_id }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+  <a href="/flights/create">Добавить новый рейс</a>
+</body>
+</html>
